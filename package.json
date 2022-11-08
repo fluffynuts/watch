@@ -1,0 +1,12 @@
+{
+  "name": "watch",
+  "version": "1.0.0",
+  "description": "a minimal watch clone for windows",
+  "scripts": {
+      "build": "dotnet build src/watch.sln",
+      "publish": "dotnet publish src/watch/watch.csproj --configuration Release --framework net6.0 --self-contained True --output Publish --runtime win-x64 --verbosity Normal /property:PublishTrimmed=True /property:PublishSingleFile=True /property:IncludeNativeLibrariesForSelfExtract=True /property:DebugType=None /property:DebugSymbols=False /property:EnableCompressionInSingleFile=True /property:TrimMode=copyused",
+      "start": "dotnet run --project src/watch/watch.csproj"
+  },
+  "author": "",
+  "license": "BSD-3-Clause"
+}
