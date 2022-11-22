@@ -4,7 +4,8 @@
   "description": "a minimal watch clone for windows",
   "scripts": {
       "build": "dotnet build src/watch.sln",
-      "publish": "dotnet publish src/watch/watch.csproj --configuration Release --framework net6.0 --self-contained True --output Publish --runtime win-x64 --verbosity Normal /property:PublishTrimmed=True /property:PublishSingleFile=True /property:IncludeNativeLibrariesForSelfExtract=True /property:DebugType=None /property:DebugSymbols=False /property:EnableCompressionInSingleFile=True /property:TrimMode=copyused",
+      "publish": "dotnet publish src/watch/watch.csproj --configuration Release --framework net7.0 --self-contained True --output Publish --runtime win-x64 --verbosity Normal /property:PublishTrimmed=True /property:PublishSingleFile=True /property:IncludeNativeLibrariesForSelfExtract=True /property:DebugType=None /property:DebugSymbols=False /property:EnableCompressionInSingleFile=True /property:TrimMode=partial",
+      "publish-net6.0": "dotnet publish src/watch/watch.csproj --configuration Release --framework net6.0 --self-contained True --output Publish --runtime win-x64 --verbosity Normal /property:PublishTrimmed=True /property:PublishSingleFile=True /property:IncludeNativeLibrariesForSelfExtract=True /property:DebugType=None /property:DebugSymbols=False /property:EnableCompressionInSingleFile=True /property:TrimMode=copyused",
       "start": "dotnet run --project src/watch/watch.csproj"
   },
   "author": "",
